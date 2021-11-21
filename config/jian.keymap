@@ -81,7 +81,7 @@
 //                           | RSE | SPC | LWR |   | LWR | BKSP | RSE |
 
                         bindings = <
-   &tog DIC &kp GRAVE  &kp W        &kp M        &kp Z        &kp FSLH     &kp FSLH           &kp P        &kp D        &kp R        &kp L        &kp X         &kp I      &kp O
+   &tog DIC &kp GRAVE  &kp W        &kp M        &kp Z        &kp CARET    &kp AMPS           &kp P        &kp D        &kp R        &kp L        &kp X         &kp I      &kp O
           &kp CAPS     &kp E        &kp B        &kp T        &kp J        &kp F              &kp K        &kp Y        &kp N        &kp C        &kp H         &kp Q
           &kp LSHIFT   &kp A        &kp SQT      &kp LBKT     &kp S        &kp DOT            &kp COMMA    &kp V        &kp G        &kp U        &kp SEMI      &kp RSHIFT
                                                                     &trans &kp SPACE &kp BSPC &kp DEL &kp RET  &trans
