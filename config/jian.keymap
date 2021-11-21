@@ -82,7 +82,7 @@
 
                         bindings = <
    &tog DIC &kp GRAVE  &kp W        &kp M        &kp Z        &kp FSLH     &kp FSLH           &kp P        &kp D        &kp R        &kp L        &kp X         &kp I      &kp O
-          &bt BT_CLR   &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4       &bt BT_SEL 4 &bt BT_SEL 3 &bt BT_SEL 2 &bt BT_SEL 1 &bt BT_SEL 0  &bt BT_CLR
+          &kp CAPS     &kp E        &kp B        &kp T        &kp J        &kp F              &kp K        &kp Y        &kp N        &kp C        &kp H         &kp Q
           &none        &none        &none        &none        &none        &none              &none        &none        &none        &none        &none         &none
                                                                     &trans &none &trans   &trans &none &trans
                         >;
