@@ -75,11 +75,11 @@
                         >;
                 };
                 dictor_layer {
-// -----------------------------------------------------------------------------------------
-// | RST | BLDR |     |     |     |     |     |   |     |     |     |     |     | BLDR | RST |
-//       | BTCLR| BT0 | BT1 | BT2 | BT3 | BT4 |   | BT4 | BT3 | BT2 | BT1 | BT0 | BTCLR|
-//       |      |     |     |     |     |     |   |     |     |     |     |     |      |
-//                          |     |     |     |   |     |     |     |
+// |  GUI |   ~  |  W  |  M  |  Z  |  /  |  ?  |   |  P  |  D   |  R  |  L  |  X  |  I   | O |
+//        | CTRL |  E  |  B  |  T  |  J  |  F  |   |  K  |  Y   |  N  |  C  |  H  |  Q   |
+//        | Shift|  A  |  "  |  [  |  S  |  .  |   |  ,  |  V   |  G  |  U  |  ;  | Shift|
+//                           | RSE | SPC | LWR |   | LWR | BKSP | RSE |
+
                         bindings = <
    &tog DIC &kp KP_N1  &kp KP_N1   &kp KP_N1        &none        &none        &none              &none        &none        &none        &none        &none         &bootloader &reset
           &bt BT_CLR   &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4       &bt BT_SEL 4 &bt BT_SEL 3 &bt BT_SEL 2 &bt BT_SEL 1 &bt BT_SEL 0  &bt BT_CLR
