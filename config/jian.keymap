@@ -56,13 +56,13 @@
                         bindings = <
    &tog DIC &kp GRAVE  &kp W        &kp M        &kp Z        &kp CARET    &kp AMPS           &kp P        &kp D        &kp R        &kp L        &kp X         &kp I      &kp O
           &kp CAPS     &hm LCTRL E  &kp B        &hm LGUI T   &hm LSHIFT J  &kp F              &kp K        &hm RSHIFT Y        &hm RGUI N        &kp C        &kp H         &kp Q
-          &mt DICP LSHIFT   &kp A        &kp SQT      &kp LBKT     &kp S        &kp DOT            &kp COMMA    &kp V        &kp G        &kp U        &kp SEMI      &mt DICP LSHIFT
+          &lt DICP LSHIFT   &kp A        &kp SQT      &kp LBKT     &kp S        &kp DOT            &kp COMMA    &kp V        &kp G        &kp U        &kp SEMI      &mt DICP LSHIFT
                                                                     &lt RSE TAB &kp SPACE &lt LWR BSPC &lt LWR ESC &mt RSHFT RET &lt RSE DEL
 
                         >;
                 };
 
-                dictorshift_layer {
+                shift_layer {
 // |QWERTY|   ~  |  W  |  M  |  Z  |  /  |  ?  |   |  P  |  D   |  R  |  L  |  X  |  I   | O |
 //        | CTRL |  E  |  B  |  T  |  J  |  F  |   |  K  |  Y   |  N  |  C  |  H  |  Q   |
 //        | Shift|  A  |  "  |  [  |  S  |  .  |   |  ,  |  V   |  G  |  U  |  ;  | Shift|
