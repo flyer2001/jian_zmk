@@ -10,9 +10,10 @@
 
 #define DEF 0
 #define DIC 1
-#define LWR 2
-#define RSE 3
-#define ADJ 4
+#define DICP 2
+#define LWR 3
+#define RSE 4
+#define ADJ 5
 
 &lt { quick_tap_ms = <200>; };
 &mt { quick_tap_ms = <200>; };
@@ -47,13 +48,28 @@
                 };
 
                 dictor_layer {
-// |  GUI |   ~  |  W  |  M  |  Z  |  /  |  ?  |   |  P  |  D   |  R  |  L  |  X  |  I   | O |
+// |QWERTY|   ~  |  W  |  M  |  Z  |  /  |  ?  |   |  P  |  D   |  R  |  L  |  X  |  I   | O |
 //        | CTRL |  E  |  B  |  T  |  J  |  F  |   |  K  |  Y   |  N  |  C  |  H  |  Q   |
 //        | Shift|  A  |  "  |  [  |  S  |  .  |   |  ,  |  V   |  G  |  U  |  ;  | Shift|
 //                           | RSE | SPC | LWR |   | LWR | BKSP | RSE |
 
                         bindings = <
    &tog DIC &kp GRAVE  &kp W        &kp M        &kp Z        &kp CARET    &kp AMPS           &kp P        &kp D        &kp R        &kp L        &kp X         &kp I      &kp O
+          &kp CAPS     &hm LCTRL E  &kp B        &hm LGUI T   &hm LSHIFT J  &kp F              &kp K        &hm RSHIFT Y        &hm RGUI N        &kp C        &kp H         &kp Q
+          &mt DICP LSHIFT   &kp A        &kp SQT      &kp LBKT     &kp S        &kp DOT            &kp COMMA    &kp V        &kp G        &kp U        &kp SEMI      &mt DICP LSHIFT
+                                                                    &lt RSE TAB &kp SPACE &lt LWR BSPC &lt LWR ESC &mt RSHFT RET &lt RSE DEL
+
+                        >;
+                };
+
+                dictorshift_layer {
+// |QWERTY|   ~  |  W  |  M  |  Z  |  /  |  ?  |   |  P  |  D   |  R  |  L  |  X  |  I   | O |
+//        | CTRL |  E  |  B  |  T  |  J  |  F  |   |  K  |  Y   |  N  |  C  |  H  |  Q   |
+//        | Shift|  A  |  "  |  [  |  S  |  .  |   |  ,  |  V   |  G  |  U  |  ;  | Shift|
+//                           | RSE | SPC | LWR |   | LWR | BKSP | RSE |
+
+                        bindings = <
+   &none &kp GRAVE  &kp W        &kp LS(RBKT)    &kp Z        &kp CARET    &kp AMPS           &kp P        &kp D        &kp R        &kp L        &kp X         &kp I      &kp O
           &kp CAPS     &hm LCTRL E  &kp B        &hm LGUI T   &hm LSHIFT J  &kp F              &kp K        &hm RSHIFT Y        &hm RGUI N        &kp C        &kp H         &kp Q
           &kp LSHIFT   &kp A        &kp SQT      &kp LBKT     &kp S        &kp DOT            &kp COMMA    &kp V        &kp G        &kp U        &kp SEMI      &kp RSHIFT
                                                                     &lt RSE TAB &kp SPACE &lt LWR BSPC &lt LWR ESC &mt RSHFT RET &lt RSE DEL
