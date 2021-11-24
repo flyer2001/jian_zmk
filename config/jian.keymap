@@ -55,7 +55,7 @@
 
                         bindings = <
    &tog DIC &kp GRAVE  &kp W        &kp M        &kp Z        &kp CARET    &kp AMPS           &kp P        &kp D        &kp R        &kp L        &kp X         &kp I      &kp O
-          &kp CAPS     &hm LCTRL E  &kp B        &hm LGUI T   &hm LSHIFT J  &kp F              &kp K        &hm RSHIFT Y        &hm RGUI N        &kp C        &kp H         &kp Q
+          &kp CAPS     &hm LCTRL E  &kp B        &hm LGUI T   &lt DICP J  &kp F              &kp K        &lt DICP Y        &hm RGUI N        &kp C        &kp H         &kp Q
           &lt DICP LSHIFT   &kp A        &kp SQT      &kp LBKT     &kp S        &kp DOT            &kp COMMA    &kp V        &kp G        &kp U        &kp SEMI      &mt DICP LSHIFT
                                                                     &lt RSE TAB &kp SPACE &lt LWR BSPC &lt LWR ESC &mt RSHFT RET &lt RSE DEL
 
@@ -69,9 +69,9 @@
 //                           | RSE | SPC | LWR |   | LWR | BKSP | RSE |
 
                         bindings = <
-   &none &kp GRAVE  &kp LS(Z)       &kp RBKT    &kp P        &kp LS(FSLH)   &kp EXCL           &kp P        &kp D        &kp R        &kp L        &kp X         &kp I      &kp O
-          &kp CAPS     &hm LCTRL E  &kp B        &hm LGUI T   &hm LSHIFT J  &kp F              &kp K        &hm RSHIFT Y        &hm RGUI N        &kp C        &kp H         &kp Q
-          &kp LSHIFT   &kp A        &kp SQT      &kp LBKT     &kp S        &kp DOT            &kp COMMA    &kp V        &kp G        &kp U        &kp SEMI      &kp RSHIFT
+   &none &kp LS(GRAVE)  &kp LS(W)       &kp RBKT    &kp LS(Z)     &kp LS(FSLH)   &kp EXCL          &kp RS(P)    &kp RS(D)        &kp RS(R)        &kp RS(L)        &kp RS(X)     &kp RS(I)     &kp RS(O)
+          &none   &kp LS(E)  &kp LS(B)    &kp LS(T)   &kp LS(J)  &kp LS(F)              &kp RS(K)    &kp RS(Y)        &kp RS(N)      &kp RS(C)     &kp RS(H)         &kp RS(Q)
+          &none   &kp LS(A)  &kp LS(SQT)  &kp LS(LBKT)  &kp LS(S)  &kp LS(DOT)          &kp RS(COMMA)    &kp RS(V)    &kp RS(G)      &kp RS(U)     &kp RS(SEMI)      &none
                                                                     &lt RSE TAB &kp SPACE &lt LWR BSPC &lt LWR ESC &mt RSHFT RET &lt RSE DEL
 
                         >;
