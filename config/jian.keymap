@@ -69,7 +69,7 @@
 //                           | RSE | SPC | LWR |   | LWR | BKSP | RSE |
 
                         bindings = <
-   &none &kp GRAVE  &kp LS(Z)        &kp RBKT    &kp P        &kp CARET    &kp AMPS           &kp P        &kp D        &kp R        &kp L        &kp X         &kp I      &kp O
+   &none &kp GRAVE  &kp LS(Z)       &kp RBKT    &kp P        &kp LS(FSLH)   &kp EXCL           &kp P        &kp D        &kp R        &kp L        &kp X         &kp I      &kp O
           &kp CAPS     &hm LCTRL E  &kp B        &hm LGUI T   &hm LSHIFT J  &kp F              &kp K        &hm RSHIFT Y        &hm RGUI N        &kp C        &kp H         &kp Q
           &kp LSHIFT   &kp A        &kp SQT      &kp LBKT     &kp S        &kp DOT            &kp COMMA    &kp V        &kp G        &kp U        &kp SEMI      &kp RSHIFT
                                                                     &lt RSE TAB &kp SPACE &lt LWR BSPC &lt LWR ESC &mt RSHFT RET &lt RSE DEL
