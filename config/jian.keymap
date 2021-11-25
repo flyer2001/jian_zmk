@@ -11,9 +11,10 @@
 #define DEF 0
 #define DIC 1
 #define DICP 2
-#define LWR 3
-#define RSE 4
-#define ADJ 5
+#define DICL 3
+#define LWR 4
+#define RSE 5
+#define ADJ 6
 
 &lt { quick_tap_ms = <200>; };
 &mt { quick_tap_ms = <200>; };
@@ -62,7 +63,7 @@
                         >;
                 };
 
-                shift_layer {
+                dictorshift_layer {
 // |QWERTY|   ~  |  W  |  M  |  Z  |  /  |  ?  |   |  P  |  D   |  R  |  L  |  X  |  I   | O |
 //        | CTRL |  E  |  B  |  T  |  J  |  F  |   |  K  |  Y   |  N  |  C  |  H  |  Q   |
 //        | Shift|  A  |  "  |  [  |  S  |  .  |   |  ,  |  V   |  G  |  U  |  ;  | Shift|
@@ -77,6 +78,20 @@
                         >;
                 };
 
+                dictorlower_layer {
+// -----------------------------------------------------------------------------------------
+// |     |  _  |  F1 |  F2 |  F3 |  F4 |  F5 |   |  F6 |  F7 |  F8 |  F9 | F10 | F11 | F12 |
+//       |  +  |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  |  -  |
+//       |  =  |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  |     |
+//                    | GUI |     | SPC |   | ENT |     | ALT |
+                        bindings = <
+   &trans &kp UNDER      &kp LS(M)  &kp LS(RBKT)    &kp HASH     &kp DLLR        &kp PRCNT     &kp CARET &kp AMPS        &kp STAR    &kp LPAR    &kp RPAR  &kp MINUS &kp EQUAL
+          &mt LCTRL PLUS &kp N1     &kp N2          &kp N3       &hm LSHIFT N4   &kp N5        &kp N6    &hm RSHIFT N7   &kp N8      &kp N9      &kp N0    &kp PLUS
+          &mt LALT EQUAL &kp F1     &kp F2          &kp F3       &kp F4          &kp F5        &kp F6    &kp F7          &kp F8      &kp F9      &kp F10   &tog DIC
+                                              &lt ADJ TAB &trans &trans   &trans &trans &lt ADJ DEL
+                        >;
+                };
+
                 lower_layer {
 // -----------------------------------------------------------------------------------------
 // |     |  _  |  F1 |  F2 |  F3 |  F4 |  F5 |   |  F6 |  F7 |  F8 |  F9 | F10 | F11 | F12 |
@@ -84,8 +99,8 @@
 //       |  =  |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  |     |
 //                    | GUI |     | SPC |   | ENT |     | ALT |
                         bindings = <
-   &trans &kp UNDER      &kp EXCL   &kp AT &kp HASH     &kp DLLR        &kp PRCNT     &kp CARET &kp AMPS        &kp STAR    &kp LPAR    &kp RPAR  &kp MINUS &kp PLUS
-          &mt LCTRL PLUS &kp N1     &kp N2 &kp N3       &hm LSHIFT N4   &kp N5        &kp N6    &hm RSHIFT N7   &kp N8      &kp N9      &kp N0    &mt RCTRL MINUS
+   &trans &kp UNDER      &kp EXCL   &kp AT &kp HASH     &kp DLLR        &kp PRCNT     &kp CARET &kp AMPS        &kp STAR    &kp LPAR    &kp RPAR  &kp MINUS &kp EQUAL
+          &mt LCTRL PLUS &kp N1     &kp N2 &kp N3       &hm LSHIFT N4   &kp N5        &kp N6    &hm RSHIFT N7   &kp N8      &kp N9      &kp N0    &kp PLUS
           &mt LALT EQUAL &kp F1     &kp F2 &kp F3       &kp F4          &kp F5        &kp F6    &kp F7          &kp F8      &kp F9      &kp F10   &tog DIC
                                               &lt ADJ TAB &trans &trans   &trans &trans &lt ADJ DEL
                         >;
