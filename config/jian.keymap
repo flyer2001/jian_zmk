@@ -58,7 +58,7 @@
    &tog DIC &kp GRAVE  &kp W        &kp M        &kp Z        &kp CARET    &kp AMPS           &kp P        &kp D        &kp R        &kp L        &kp X         &kp I      &kp O
           &kp CAPS     &hm LCTRL E  &kp B        &hm LGUI T   &lt DICP J  &kp F              &kp K        &lt DICP Y        &hm RGUI N        &kp C        &kp H         &kp Q
           &lt DICP LSHIFT   &kp A        &kp SQT      &kp LBKT     &kp S        &kp DOT            &kp COMMA    &kp V        &kp G        &kp U        &kp SEMI      &mt DICP LSHIFT
-                                                                    &lt RSE TAB &kp SPACE &lt LWR BSPC &lt LWR ESC &mt RSHFT RET &lt RSE DEL
+                                                                    &lt RSE TAB &kp SPACE &lt DICL BSPC &lt DICL ESC &mt RSHFT RET &lt RSE DEL
 
                         >;
                 };
