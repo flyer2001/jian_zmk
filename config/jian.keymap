@@ -101,7 +101,7 @@
 //                    | GUI |     | SPC |   | ENT |     | ALT |
                         bindings = <
    &trans &kp UNDER      &kp EXCL   &kp AT &kp HASH     &kp DLLR        &kp PRCNT     &kp CARET &kp AMPS        &kp STAR    &kp LPAR    &kp RPAR  &kp MINUS &kp EQUAL
-          &mt LCTRL PLUS &kp N1     &kp N2 &kp N3       &hm LSHIFT N4   &kp N5        &kp N6    &hm RSHIFT N7   &kp N8      &kp N9      &kp N0    &kp PLUS
+          &mt LCTRL PLUS &hm LCTRL N1   &hm LALT N2 &hm LGUI N3       &hm LSHIFT N4   &kp N5        &kp N6    &hm RSHIFT N7 &hm RGUI N8      &hm RALT N9      &hm RCTRL N0    &kp PLUS
           &mt LALT EQUAL &kp F1     &kp F2 &kp F3       &kp F4          &kp F5        &kp F6    &kp F7          &kp F8      &kp F9      &kp F10   &tog DIC
                                               &lt ADJ TAB &trans &trans   &trans &trans &lt ADJ DEL
                         >;
