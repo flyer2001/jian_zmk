@@ -131,7 +131,7 @@
    &trans &kp PAUSE_BREAK   &kp C_VOL_UP    &kp HOME &kp UP    &kp PG_UP &kp KP_MINUS        &kp C_VOL_UP &kp KP_N7 &kp UP   &kp KP_N9 &kp KP_PLUS &kp KP_MINUS &trans
           &none             &hm LCTRL C_MUTE      &hm LALT LEFT &hm LGUI DOWN  &hm LSHIFT RIGHT &kp KP_PLUS         &kp C_MUTE   &hm RSHIFT LEFT &hm RGUI DOWN    &hm RALT RIGHT &hm RCTRL KP_MULTIPLY  &kp KP_SLASH
           &trans            &kp C_VOL_DN    &kp END  &kp PSCRN &kp PG_DN &kp KP_DOT          &kp KP_N0 &kp KP_N1  &kp KP_N2 &kp KP_N3 &kp KP_DOT &kp EQUAL
-                                                           &trans &trans &lt ADJ RET   &lt ADJ ESC &trans &trans
+                                                           &kp ESC &kp SPACE &lt DEL &kp TAB &kp SPACE &kp DEL
                         >;
                 };
 
