@@ -14,7 +14,8 @@
 #define DICL 3
 #define LWR 4
 #define RSE 5
-#define ADJ 6
+#define ARR 6
+#define ADJ 7
 
 &lt { quick_tap_ms = <200>; };
 &mt { quick_tap_ms = <200>; };
@@ -43,7 +44,7 @@
                         bindings = <
    &kp ESC &kp GRAVE &kp Q &kp W &kp E &kp R &kp T &kp Y         &kp U  &kp I     &kp O   &kp P    &kp LBKT &mt RWIN RBKT
             &mt LSHIFT CAPS &hm LCTRL A &hm LALT S &hm LGUI D &hm LSHIFT F &kp G &kp H  &hm RSHIFT J  &hm RGUI K  &hm RALT L &hm RCTRL SEMI &mt RCTRL SQT
-            &kp LALT  &kp Z &kp X &kp C &kp V &kp B &kp N         &kp M  &kp COMMA &kp DOT &kp FSLH &mt RALT BSLH
+            &lt ARR LSHIFT  &kp Z &kp X &kp C &kp V &kp B &kp N         &kp M  &kp COMMA &kp DOT &kp FSLH &lt ARR RSHIFT
                          &lt RSE TAB &kp SPACE &lt LWR BSPC &lt LWR ESC &mt RSHFT RET &lt RSE DEL
                         >;
                 };
@@ -57,7 +58,7 @@
                         bindings = <
    &tog DIC &kp GRAVE  &kp W        &kp M        &kp Z        &kp CARET    &kp AMPS           &kp P        &kp D        &kp R        &kp L        &kp X         &kp I      &kp O
           &kp CAPS     &hm LCTRL E  &kp B        &hm LGUI T   &lt DICP J  &kp F              &kp K        &lt DICP Y        &hm RGUI N        &kp C        &kp H         &kp Q
-          &lt DICP LSHIFT   &kp A        &kp SQT      &kp LBKT     &kp S        &kp DOT            &kp COMMA    &kp V        &kp G        &kp U        &kp SEMI      &mt DICP LSHIFT
+          &lt ARR LSHIFT   &kp A        &kp SQT      &kp LBKT     &kp S        &kp DOT            &kp COMMA    &kp V        &kp G        &kp U        &kp SEMI      &lt ARR RSHIFT
                                                                     &lt RSE TAB &kp SPACE &lt DICL BSPC &lt DICL ESC &mt RSHFT RET &lt RSE DEL
 
                         >;
@@ -113,12 +114,27 @@
 //       |      |  0  |  1  |  2  |  3  |  .  |   | VOLD| END | PRTS| PGDN| PAUS|     |
 //                          |     |     | ADJ |   | ADJ |     |     |
                         bindings = <
-   &trans &kp KP_NUM      &kp KP_SLASH    &kp KP_N7 &kp KP_N8 &kp KP_N9 &kp KP_MINUS        &kp C_VOL_UP &kp HOME &kp UP    &kp PG_UP &kp SLCK &kp CAPS &trans
-          &mt LCTRL EQUAL &kp KP_MULTIPLY &kp KP_N4 &kp KP_N5 &kp KP_N6 &kp KP_PLUS         &kp C_MUTE   &kp LEFT &kp DOWN    &kp RIGHT &kp INS  &mt RCTRL K_APP
-          &trans          &kp KP_N0       &kp KP_N1 &kp KP_N2 &kp KP_N3 &kp KP_DOT          &kp C_VOL_DN &kp END  &kp PSCRN &kp PG_DN &kp PAUSE_BREAK &trans
+   &trans &kp PAUSE_BREAK   &kp C_VOL_UP    &kp HOME &kp UP    &kp PG_UP &kp KP_MINUS        &kp C_VOL_UP &kp KP_N7 &kp KP_N8   &kp KP_N9 &kp KP_PLUS &kp KP_MINUS &trans
+          &none             &kp C_MUTE      &kp LEFT &kp DOWN  &kp RIGHT &kp KP_PLUS         &kp C_MUTE   &hm RSHIFT KP_N4 &hm RGUI KP_N5    &hm RALT KP_N6 &hm RCTRL KP_MULTIPLY  &kp KP_SLASH
+          &trans            &kp C_VOL_DN    &kp END  &kp PSCRN &kp PG_DN &kp KP_DOT          &kp KP_N0 &kp KP_N1  &kp KP_N2 &kp KP_N3 &kp KP_DOT &kp EQUAL
                                                            &trans &trans &lt ADJ RET   &lt ADJ ESC &trans &trans
                         >;
                 };
+
+                arrow_layer {
+// -----------------------------------------------------------------------------------------
+// |     | NMLK |  /  |  7  |  8  |  9  |  -  |   | VOLU| HOME|  UP | PGUP| SCLK| CLCK|     |
+//       | CTRL |  *  |  4  |  5  |  6  |  +  |   | MUT | LEFT| DOWN| RGHT| INS | APP |
+//       |      |  0  |  1  |  2  |  3  |  .  |   | VOLD| END | PRTS| PGDN| PAUS|     |
+//                          |     |     | ADJ |   | ADJ |     |     |
+                        bindings = <
+   &trans &kp PAUSE_BREAK   &kp C_VOL_UP    &kp HOME &kp UP    &kp PG_UP &kp KP_MINUS        &kp C_VOL_UP &kp KP_N7 &kp UP   &kp KP_N9 &kp KP_PLUS &kp KP_MINUS &trans
+          &none             &hm LCTRL C_MUTE      &hm LALT LEFT &hm LGUI DOWN  &hm LSHIFT RIGHT &kp KP_PLUS         &kp C_MUTE   &hm RSHIFT LEFT &hm RGUI DOWN    &hm RALT RIGHT &hm RCTRL KP_MULTIPLY  &kp KP_SLASH
+          &trans            &kp C_VOL_DN    &kp END  &kp PSCRN &kp PG_DN &kp KP_DOT          &kp KP_N0 &kp KP_N1  &kp KP_N2 &kp KP_N3 &kp KP_DOT &kp EQUAL
+                                                           &trans &trans &lt ADJ RET   &lt ADJ ESC &trans &trans
+                        >;
+                };
+
                 adjust_layer {
 // -----------------------------------------------------------------------------------------
 // | RST | BLDR |     |     |     |     |     |   |     |     |     |     |     | BLDR | RST |
