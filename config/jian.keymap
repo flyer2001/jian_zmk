@@ -116,8 +116,8 @@
                         bindings = <
    &trans &kp PAUSE_BREAK   &kp C_VOL_UP    &kp HOME &kp UP    &kp PG_UP &kp KP_MINUS        &kp C_VOL_UP &kp KP_N7 &kp KP_N8   &kp KP_N9 &kp KP_PLUS &kp KP_MINUS &trans
           &none             &kp C_MUTE      &kp LEFT &kp DOWN  &kp RIGHT &kp KP_PLUS         &kp C_MUTE   &hm RSHIFT KP_N4 &hm RGUI KP_N5    &hm RALT KP_N6 &hm RCTRL KP_MULTIPLY  &none
-          &trans            &kp C_VOL_DN    &kp END  &kp PSCRN &kp PG_DN &kp KP_DOT          &kp KP_N0 &kp KP_N1  &kp KP_N2 &kp KP_N3 &kp KP_DOT &kp EQUAL
-                                                           &trans &trans &lt ADJ RET   &lt ADJ ESC &trans &trans
+&trans            &kp C_VOL_DN    &kp END  &kp PSCRN &kp PG_DN &kp KP_DOT          &kp KP_N0 &kp KP_N1  &kp KP_N2 &kp KP_N3 &kp KP_DOT &kp EQUAL
+                                                           &trans &trans &lt ADJ RET   &lt ADJ ESC &trans &kp KP_N0
                         >;
                 };
 
