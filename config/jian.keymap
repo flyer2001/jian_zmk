@@ -64,18 +64,17 @@
                         >;
                 };
 
-                dictorshift_layer {
-// |QWERTY|   ~  |  W  |  M  |  Z  |  /  |  ?  |   |  P  |  D   |  R  |  L  |  X  |  I   | O |
-//        | CTRL |  E  |  B  |  T  |  J  |  F  |   |  K  |  Y   |  N  |  C  |  H  |  Q   |
-//        | Shift|  A  |  "  |  [  |  S  |  .  |   |  ,  |  V   |  G  |  U  |  ;  | Shift|
-//                           | RSE | SPC | LWR |   | LWR | BKSP | RSE |
-
-                        bindings = <
-   &none &kp LS(GRAVE)  &kp LS(W)       &kp RBKT    &kp LS(Z)     &kp LS(FSLH)   &kp EXCL          &kp RS(P)    &kp RS(D)        &kp RS(R)        &kp RS(L)        &kp RS(X)     &kp RS(I)     &kp RS(O)
-          &none   &kp LS(E)  &kp LS(B)    &kp LS(T)   &kp LS(J)  &kp LS(F)              &kp RS(K)    &kp RS(Y)        &kp RS(N)      &kp RS(C)     &kp RS(H)         &kp RS(Q)
-          &none   &kp LS(A)  &kp LS(SQT)  &kp LS(LBKT)  &kp LS(S)  &kp LS(DOT)          &kp RS(COMMA)    &kp RS(V)    &kp RS(G)      &kp RS(U)     &kp RS(SEMI)      &none
-                                                                    &lt RSE TAB &kp SPACE &lt LWR BSPC &lt LWR ESC &mt RSHFT RET &lt RSE DEL
-
+        dictorshift_layer {
+            bindings = <
+    // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮                               ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
+            &none     &kp LS(GRAVE)   &kp LS(W)      &kp RBKT     &kp LS(Z)    &kp LS(FSLH)   &kp EXCL                                      &kp RS(P)     &kp RS(D)     &kp RS(R)    &kp RS(L)      &kp RS(X)     &kp RS(I)     &kp RS(O)
+    // ╰─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤                               ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────╯
+                        &none         &kp LS(E)      &kp LS(B)    &kp LS(T)     &kp LS(J)    &kp LS(F)                                      &kp RS(K)     &kp RS(Y)     &kp RS(N)     &kp RS(C)     &kp RS(H)     &kp RS(Q)
+    //               ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤                               ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
+                        &none          &kp LS(A)  &kp LS(SQT)   &kp LS(LBKT)   &kp LS(S)     &kp LS(DOT)                                  &kp RS(COMMA)   &kp RS(V)     &kp RS(G)     &kp RS(U)     &kp RS(SEMI)  &none
+    //               ╰─────────────┴─────────────┴─────────────┴─────────────┼─────────────┼─────────────┼─────────────╮   ╭─────────────┼─────────────┼─────────────┼─────────────┴─────────────┴─────────────┴─────────────╯
+                                                                               &lt RSE TAB   &kp SPACE     &lt LWR BSPC     &lt LWR ESC   &mt RSHFT RET  &lt RSE DEL
+    //                                                                       ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
                         >;
                 };
 
