@@ -64,42 +64,36 @@
                         >;
                 };
 
-                dictorshift_layer {
-// |QWERTY|   ~  |  W  |  M  |  Z  |  /  |  ?  |   |  P  |  D   |  R  |  L  |  X  |  I   | O |
-//        | CTRL |  E  |  B  |  T  |  J  |  F  |   |  K  |  Y   |  N  |  C  |  H  |  Q   |
-//        | Shift|  A  |  "  |  [  |  S  |  .  |   |  ,  |  V   |  G  |  U  |  ;  | Shift|
-//                           | RSE | SPC | LWR |   | LWR | BKSP | RSE |
-
-                        bindings = <
-   &none &kp LS(GRAVE)  &kp LS(W)       &kp RBKT    &kp LS(Z)     &kp LS(FSLH)   &kp EXCL          &kp RS(P)    &kp RS(D)        &kp RS(R)        &kp RS(L)        &kp RS(X)     &kp RS(I)     &kp RS(O)
-          &none   &kp LS(E)  &kp LS(B)    &kp LS(T)   &kp LS(J)  &kp LS(F)              &kp RS(K)    &kp RS(Y)        &kp RS(N)      &kp RS(C)     &kp RS(H)         &kp RS(Q)
-          &none   &kp LS(A)  &kp LS(SQT)  &kp LS(LBKT)  &kp LS(S)  &kp LS(DOT)          &kp RS(COMMA)    &kp RS(V)    &kp RS(G)      &kp RS(U)     &kp RS(SEMI)      &none
-                                                                    &lt RSE TAB &kp SPACE &lt LWR BSPC &lt LWR ESC &mt RSHFT RET &lt RSE DEL
-
+        dictorshift_layer {
+            bindings = <
+    // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮                               ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
+            &none     &kp LS(GRAVE)   &kp LS(W)     &kp RBKT     &kp LS(Z)     &kp LS(FSLH)   &kp EXCL                                      &kp RS(P)    &kp RS(D)      &kp RS(R)    &kp RS(L)     &kp RS(X)      &kp RS(I)     &kp RS(O)
+    // ╰─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤                               ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────╯
+                          &none       &kp LS(E)     &kp LS(B)    &kp LS(T)      &kp LS(J)     &kp LS(F)                                     &kp RS(K)    &kp RS(Y)      &kp RS(N)    &kp RS(C)     &kp RS(H)      &kp RS(Q)
+    //               ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤                               ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
+                          &none       &kp LS(A)     &kp LS(SQT)  &kp LS(LBKT)   &kp LS(S)     &kp LS(DOT)                                 &kp RS(COMMA)  &kp RS(V)      &kp RS(G)    &kp RS(U)     &kp RS(SEMI)   &none
+    //               ╰─────────────┴─────────────┴─────────────┴─────────────┼─────────────┼─────────────┼─────────────╮   ╭─────────────┼─────────────┼─────────────┼─────────────┴─────────────┴─────────────┴─────────────╯
+                                                                                  &none         &none         &none             &none         &none         &none
+    //                                                                       ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
                         >;
                 };
 
-                dictorlower_layer {
-// -----------------------------------------------------------------------------------------
-// |     |  _  |  F1 |  F2 |  F3 |  F4 |  F5 |   |  F6 |  F7 |  F8 |  F9 | F10 | F11 | F12 |
-//       |  +  |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  |  -  |
-//       |  =  |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  |     |
-//                    | GUI |     | SPC |   | ENT |     | ALT |
-                        bindings = <
-   &trans &kp UNDER      &kp LS(M)  &kp LS(RBKT)    &kp HASH     &kp DLLR        &kp PRCNT     &kp CARET &kp AMPS        &kp STAR    &kp LPAR    &kp RPAR  &kp MINUS &kp EQUAL
-          &mt LCTRL PLUS &kp N1     &kp N2          &kp N3       &hm LSHIFT N4   &kp N5        &kp N6    &hm RSHIFT N7   &kp N8      &kp N9      &kp N0    &kp PLUS
-          &mt LALT EQUAL &kp F1     &kp F2          &kp F3       &kp F4          &kp F5        &kp F6    &kp F7          &kp F8      &kp F9      &kp F10   &tog DIC
-                                              &lt ADJ TAB &trans &trans   &trans &trans &lt ADJ DEL
+        dictorlower_layer {
+            bindings = <
+    // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮                               ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
+          &trans        &kp UNDER      &kp LS(M)   &kp LS(RBKT)   &kp HASH      &kp DLLR      &kp PRCNT                                     &kp CARET      &kp AMPS     &kp STAR      &kp LPAR      &kp RPAR     &kp MINUS      &kp EQUAL
+    // ╰─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤                               ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────╯
+                         &none          &kp N1       &kp N2        &kp N3     &hm LSHIFT N4    &kp N5                                       &kp N6      &hm RSHIFT N7    &kp N8        &kp N9        &kp N0       &kp PLUS
+    //               ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤                               ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤      
+                         &none          &kp F1       &kp F2        &kp F3       &kp F4         &kp F5                                       &kp F6          &kp F7       &kp F8         kp F9        &kp F10       &none
+    //               ╰─────────────┴─────────────┴─────────────┴─────────────┼─────────────┼─────────────┼─────────────╮   ╭─────────────┼─────────────┼─────────────┼─────────────┴─────────────┴─────────────┴─────────────╯
+                                                                                &lt ADJ TAB   &trans          &trans            &trans      &trans       &lt ADJ DEL
+    //                                                                       ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
                         >;
                 };
 
-                lower_layer {
-// -----------------------------------------------------------------------------------------
-// |     |  _  |  F1 |  F2 |  F3 |  F4 |  F5 |   |  F6 |  F7 |  F8 |  F9 | F10 | F11 | F12 |
-//       |  +  |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  |  -  |
-//       |  =  |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  |     |
-//                    | GUI |     | SPC |   | ENT |     | ALT |
-                        bindings = <
+        lower_layer {
+            bindings = <
    &trans &kp UNDER      &kp EXCL   &kp AT &kp HASH     &kp DLLR        &kp PRCNT     &kp CARET &kp AMPS        &kp STAR    &kp LPAR    &kp RPAR  &kp MINUS &kp EQUAL
           &mt LCTRL PLUS &hm LCTRL N1   &hm LALT N2 &hm LGUI N3       &hm LSHIFT N4   &kp N5        &kp N6    &hm RSHIFT N7 &hm RGUI N8      &hm RALT N9      &hm RCTRL N0    &kp PLUS
           &mt LALT EQUAL &kp F1     &kp F2 &kp F3       &kp F4          &kp F5        &kp F6    &kp F7          &kp F8      &kp F9      &kp F10   &tog DIC
