@@ -2,11 +2,9 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
-    - name: flyer2001
-      url-base: https://github.com/flyer2001
   projects:
     - name: zmk
-      remote: flyer2001
+      remote: zmkfirmware
       revision: main
       import: app/west.yml
   self:
