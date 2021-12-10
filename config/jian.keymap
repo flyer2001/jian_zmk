@@ -25,7 +25,7 @@
     #binding-cells = <0>; \
     bindings = <BINDINGS>; \
   };
-MACRO(toggle, &kp LC(SPACE), &tog DIC)
+MACRO(toggle, &kp LC(SPACE) &tog DIC)
 
 &lt { quick_tap_ms = <200>; };
 &mt { quick_tap_ms = <200>; };
