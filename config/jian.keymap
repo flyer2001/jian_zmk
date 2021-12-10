@@ -17,6 +17,16 @@
 #define ARR 6
 #define ADJ 7
 
+#define str(s) #s
+#define MACRO(NAME, BINDINGS) \
+  macro_##NAME: macro_##NAME { \
+    compatible = "zmk,behavior-macro"; \
+    label = str(NAME); \
+    #binding-cells = <0>; \
+    bindings = <BINDINGS>; \
+  };
+MACRO(toggle, &kp LC(SPACE), &tog DIC)
+
 &lt { quick_tap_ms = <200>; };
 &mt { quick_tap_ms = <200>; };
 
@@ -45,7 +55,7 @@
     //               ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤                               ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
                      &lt ARR LSHIFT     &kp Z         &kp X         &kp C         &kp V         &kp B                                         &kp N         &kp M      &kp COMMA     &kp DOT        &kp FSLH    &lt ARR BSLH
     //               ╰─────────────┴─────────────┴─────────────┴─────────────┼─────────────┼─────────────┼─────────────╮   ╭─────────────┼─────────────┼─────────────┼─────────────┴─────────────┴─────────────┴─────────────╯
-                                                                               &lt RSE TAB    &kp SPACE    &lt LWR BSPC      &lt LWR DEL  &mt RSHFT RET   &tog DIC
+                                                                               &lt RSE TAB    &kp SPACE    &lt LWR BSPC      &lt LWR DEL  &mt RSHFT RET   &macro_toggle
     //                                                                       ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
                         >;
                 };
@@ -59,7 +69,7 @@
     //               ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤                               ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
                       &lt ARR LSHIFT    &kp A        &kp SQT      &kp LBKT        &kp S        &kp DOT                                       &kp COMMA      &kp V         &kp G        &kp U        &kp SEMI    &lt ARR RSHIFT
     //               ╰─────────────┴─────────────┴─────────────┴─────────────┼─────────────┼─────────────┼─────────────╮   ╭─────────────┼─────────────┼─────────────┼─────────────┴─────────────┴─────────────┴─────────────╯
-                                                                                &lt RSE TAB    &kp SPACE  &lt DICL BSPC     &lt DICL ESC  &mt RSHFT RET    &tog DIC
+                                                                                &lt RSE TAB    &kp SPACE  &lt DICL BSPC     &lt DICL ESC  &mt RSHFT RET    &macro_toggle
     //                                                                       ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
                         >;
                 };
