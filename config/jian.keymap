@@ -35,9 +35,9 @@
 
         macro: macros {
             compatible = "zmk,behavior-macro";
-            lamel = "MACROS";
+            label = "MACROS";
             #binding-cells = <0>;
-            bindings = <BINDINGS>;
+            bindings = <&kp LC(SPACE)>, <&tog DIC>;
         };
     };
     
