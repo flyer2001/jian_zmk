@@ -45,8 +45,8 @@
         compatible = "zmk,combos";
         combo_x {
             timeout-ms = <150>;
-            key-positions = <16 40>;
-            bindings = <&macro>;
+            key-positions = <15 39>;
+            bindings = <&kp X>;
         };
     };
     
